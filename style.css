@@ -8,6 +8,10 @@
 
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 :root{
     --greyy: #D3D3D3;
     --whitee: white;
