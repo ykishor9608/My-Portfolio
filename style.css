@@ -123,9 +123,6 @@ html{
   .img{
     display: none;
   }
-  .hed{
-    grid-template-columns: 1fr;
-  }
 
 }
 
@@ -166,7 +163,11 @@ body{
 }
 
     .smltxt{
-        font-size: 14px;
+        font-size: clamp(8px,2vw,14px);
+    }
+
+    .bigtxt{
+        font-size: clamp(12px,3vw,16px);
     }
 
     .cont{
@@ -283,18 +284,26 @@ body{
         .hed{
             
             display: grid;
-            grid-template-columns: 6fr 4fr;
+            grid-template-columns: 1fr;
             background-image: url('img7.jpg');
             background-size: cover;
             border-radius: 25px;
             overflow: hidden;
             
-        }   
+        }
+        
+        @media (min-width: 769px) {
+                    .hed {
+                        grid-template-columns: 6fr 4fr;
+                    }
+        }
+
             .txt{
                 display: grid;
                 padding: 40px;
                 padding-top: 60px;
                 padding-bottom: 60px;
+                gap: 5px;
             }   
 
                 .nme{
@@ -303,6 +312,13 @@ body{
 
                 .txt> .txt1{
                     display: inline-flex;
+                    
+                }
+                .txt11{
+                    color: black;
+                    background-color: #D3D3D3;
+                    padding: 5px;
+                    border-radius: 5px;
                 }
 
                 .hire1{
@@ -409,7 +425,7 @@ body{
             display: grid;
             grid-template-rows:auto ;
             color: white;
-            gap: 20px;
+            gap: 30px;
         }
             .cont2{
                 display: grid;
@@ -424,6 +440,7 @@ body{
                     border-radius: 25px;
                     padding: 20px;
                     gap: 10px;
+                    max-height: 200px;
                 }
 
                     .cont211{
